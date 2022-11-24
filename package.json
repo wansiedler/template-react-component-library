@@ -1,11 +1,9 @@
 {
-  "name": "@uiwi/uiwi",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/YOUR_REPOSITORY_NAME"
-  },
+  "name": "template-react-component-library",
   "version": "0.1.0",
   "description": "A simple template for a custom React component library",
   "scripts": {
+    "start:dev": "rollup  -w --bundleConfigAsCjs  -c",
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "start-storybook -p 6006",
