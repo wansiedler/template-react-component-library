@@ -797,7 +797,7 @@ npm install @babel/core @babel/preset-env @babel/preset-react @babel/preset-type
 
 Now we create our Babel configuration file in the root of our project, which tells Babel to use all these plugins we've just installed:
 
-`babel.config.js`
+`bbbbbabel.config.js`
 ```js
 module.exports = {
   presets: [

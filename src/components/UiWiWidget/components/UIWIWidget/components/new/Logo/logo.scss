@@ -1,0 +1,15 @@
+#UiWiWidgetNew {
+  .logo-new {
+    display: block;
+    position: absolute;
+    top: 10px;
+    // bottom: 2px;
+    right: 10px;
+    z-index: 100;
+    width: 25px;
+
+    > img {
+      max-width: 25px;
+    }
+  }
+}

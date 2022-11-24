@@ -1,0 +1,283 @@
+@import "src/UiWiWidget/styles/abstracts/variables";
+
+#UiWiWidget {
+  @keyframes blinker {
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  .interests-result-progress {
+    .round {
+      .progress-bar {
+        width: 80%;
+        background: $darkBlueTraditionalist;
+      }
+
+      .progress-bar-filler {
+        background: $primaryGreenTraditionalistHover;
+      }
+    }
+  }
+
+  //General, not component-specific styling
+  .interest {
+    .grill {
+      .question-overlay {
+        background: no-repeat bottom right/175% url("./images/grill-background.jpg");
+      }
+
+      .submit-button {
+        width: 172px;
+        font-size: 20px;
+        color: $white;
+        border-radius: 5px;
+        border: 0;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        margin-top: 30px;
+      }
+
+      .choices {
+        margin-top: 10px;
+        z-index: 10;
+        position: relative;
+        display: flex;
+        column-gap: 12px;
+        row-gap: 3px; //because labels have margin-top: 9px
+        flex-wrap: wrap;
+        justify-content: center;
+
+        label {
+          flex: 0 0 150px;
+          //align-self: flex-start;
+          min-height: auto;
+          height: max-content;
+          padding: 35px 0 35px 0;
+          line-height: 30px;
+          max-height: 30px;
+          width: 150px;
+          border-radius: 5px;
+          box-shadow: 0 4px 8px $grill-box-shadow;
+          font: normal normal normal 20px/23px Arial;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .politik {
+      .question-overlay {
+        margin-bottom: 10px !important;
+      }
+
+      .choices {
+        margin-top: 80px;
+
+        .label {
+          margin-top: 12px;
+        }
+      }
+
+      .question:before {
+        opacity: 0.5;
+        background: no-repeat center center/cover url("./images/politik-background.jpeg");
+      }
+    }
+  }
+
+  //InterestsSelect-specific styling
+  .interest.interestsSelect {
+    .politik {
+      h3 {
+        margin-top: 0;
+        font-size: 25px;
+      }
+
+      .question-overlay {
+        height: 300px;
+        margin-bottom: 5px;
+
+        .question:before {
+          clip-path: ellipse(80% 100% at 50% 0%);
+        }
+
+        .question {
+          height: inherit;
+          background-size: cover !important;
+          //background: url("./images/politik-background.jpeg") no-repeat 34% center/138% !important;
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: center;
+          align-items: center;
+
+          clip-path: ellipse(85% 100% at 50% 0%);
+
+          .subtext {
+            margin-top: 20px;
+            width: 80%;
+          }
+        }
+
+      }
+
+      .question > div {
+        font-size: 20px;
+      }
+
+      .choices {
+        margin-top: 0;
+
+        label {
+          font-size: 20px;
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .grill {
+      h3 {
+        font-size: 23px;
+        margin: 20px 50px 0;
+        line-height: 30px;
+      }
+
+
+      .subtext {
+        font-size: 18px;
+        margin: 2px 40px 0px;
+      }
+    }
+
+  }
+
+  //Question-specific styling
+  .interest.Question {
+
+    .choices {
+      margin-top: 0px !important;
+
+      label {
+        font-size: 20px;
+      }
+    }
+
+    .submit-button {
+      margin-top: 30px;
+    }
+  }
+
+  .interest.Question, .interest.interestsResult {
+    .politik, .urlaub {
+      .answers-container {
+        margin-top: 80px;
+
+        .label {
+          margin-top: 12px;
+        }
+      }
+    }
+
+  }
+
+  //InterestsResult-specific styling
+  .interestsResult {
+    .progress-bar-label {
+      &.selected {
+        color: $white;
+      }
+    }
+
+    .grill {
+      h3 {
+        margin: 0 60px;
+      }
+
+      .result-column-container {
+        display: flex;
+        padding-top: 20px;
+      }
+
+      .result-column {
+        display: inline-block;
+        text-align: center;
+        width: 33.3%;
+        margin: 0 auto;
+      }
+
+      .result-topic {
+        font-size: 20px;
+      }
+
+      .answer-counter {
+        font-weight: bold;
+      }
+
+      .answer-details, .result-topic {
+        margin-bottom: 5px;
+      }
+    }
+
+    .politik {
+      .label-ergebnis {
+        box-sizing: border-box;
+        width: 90%;
+        margin: 30px 20px;
+        padding: 40px 30px;
+        line-height: 30px;
+        font-size: 22px;
+      }
+
+      .round .progress-bar {
+        height: 20px;
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .answer-results-container {
+        margin-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .interests-result-progress {
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          width: 90%;
+
+          .result-label {
+            text-align: left;
+            margin-right: 20px;
+            width: 30%;
+          }
+
+          .round {
+            width: 80%;
+            margin-left: auto;
+
+            .progress-bar {
+              color: $white;
+              border-radius: 50px;
+              height: 25px;
+              width: 90%;
+
+              .progress-bar-label {
+                display: block;
+                font-size: 16px;
+                padding-left: 10px;
+                text-align: left;
+                min-width: 80px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,513 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+
+  .age.Result {
+    .tatort {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+    }
+
+    .tatort {
+      .question {
+        //margin-bottom: 70px;
+      }
+
+      h3 {
+        //margin: 0 60px;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+
+          &.selected {
+            font-weight: 600;
+          }
+        }
+
+        .slider-bar-wrapper {
+          position: relative;
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            height: 20px;
+            box-shadow: 0 2px 5px $grill-box-shadow;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .tatort {
+      .top-labels-container {
+        > span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .age.Result .tatort .result-progress-bar .slider-wrapper .slider-bar-wrapper {
+    height: 20px;
+    background: #878787 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 5px #737373;
+  }
+
+  .age.selectGroup {
+    .tatort {
+      .subtitle {
+        font-size: 22px;
+        margin: 0px 50px 20px 50px;
+      }
+
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+  }
+
+
+  //SelectGroup-specific styling
+  .gender.selectGroup {
+    .tatort {
+      .subtitle {
+        margin: 0px 50px 15px 50px;
+        font: normal normal normal 18px/30px Arial;
+      }
+
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 134px;
+        display: inline-grid;
+        line-height: 1em;
+        align-items: center;
+
+
+        min-width: 130px;
+        min-height: 80px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 8px;
+      }
+
+      .result-progress-bar {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 20px;
+
+        .result-label {
+          overflow-wrap: revert;
+          word-wrap: revert;
+          box-sizing: revert;
+          --webkit-box-sizing: revert;
+        }
+      }
+    }
+  }
+
+  .gender.Result {
+    .tatort {
+      .question {
+        //margin-bottom: 70px
+      }
+
+      h3 {
+        margin: 0 60px;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        > span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-label.selected {
+        font-weight: 600;
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+          max-width: 110px;
+          text-align: left;
+          overflow-wrap: break-word;
+          white-space: pre-wrap; /* css-3 */
+          white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+          //white-space: -pre-wrap; /* Opera 4-6 */
+          white-space: -o-pre-wrap; /* Opera 7 */
+          word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            position: relative;
+            height: 20px;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+
+    .tatort {
+      .top-labels-container {
+        > span {
+          font-weight: bold;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+
+  .result-label {
+    font: 1.2em/1em Arial;
+  }
+
+  .gender.Result, .age.Result {
+    .tatort {
+      .question-overlay {
+        margin-bottom: 80px !important
+      }
+    }
+  }
+
+  //TODO: Wrong Scoping
+  .slider-bar-wrapper {
+    height: 20px;
+    background: #878787 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 5px #737373;
+  }
+
+  .age.selectGroup {
+    .tatort, {
+      .subtitle {
+        margin: 90px 50px 20px 50px;
+        font: normal normal normal 20px/30px Arial !important;
+      }
+
+
+      .select-button {
+
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+  }
+
+
+  .tatort {
+    background: $white;
+
+    .question-overlay {
+      margin-bottom: 70px;
+      background-image: url("./images/tatort-background.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 240px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      //z-index: -1;
+
+      justify-content: center;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+    .question {
+      all: revert;
+      min-height: 140px;
+      color: $black;
+      opacity: 1;
+      padding: 0;
+      z-index: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      background: transparent linear-gradient(257deg, #73C97C 0%, #2E675E 100%) 0% 0% no-repeat padding-box;
+      margin-top: 120px;
+      line-height: 0;
+      box-shadow: 0 3px 6px #000000A5;
+
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      h3 {
+        margin: 10px auto;
+        color: $white;
+      }
+    }
+
+    h3 {
+      line-height: 30px;
+    }
+
+
+    .submit-button {
+      //background: #2E675E;
+      background: rgba(0, 0, 0, 0.2509803922);
+
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: 600;
+      //line-height: 35px;
+    }
+
+
+    .label.selected, #UiWiWidget .select-button:active, .submit-button.selected {
+      background: #2E675E;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      border-radius: 0;
+    }
+
+    .progress-selected, .progresss {
+      display: table-cell;
+      width: 70%;
+    }
+
+    .choices {
+      margin-top: 10px;
+      z-index: 10;
+      position: relative;
+      display: flex;
+      column-gap: 12px;
+      row-gap: 3px; //because labels have margin-top: 9px
+      flex-wrap: wrap;
+      justify-content: center;
+
+      label {
+        flex: 0 0 150px;
+        //align-self: flex-start;
+        min-height: auto;
+        height: max-content;
+        padding: 35px 0 35px 0;
+        line-height: 30px;
+        max-height: 30px;
+        width: 150px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        font: normal normal normal 20px/23px Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .submit-button {
+      width: 172px;
+      font-size: 20px;
+      color: $white;
+      border-radius: 5px;
+      border: 0;
+      box-shadow: 0 4px 8px $grill-box-shadow;
+      margin-top: 30px;
+    }
+
+    span.choice-tab {
+      background: none;
+      display: table-cell;
+      padding: 10px 10px;
+      width: 86px;
+      text-decoration: none;
+      text-align: center;
+      color: $black;
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 15px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 15px;
+    }
+
+    .result-progress-bar {
+      .progress-bar {
+        width: 85%;
+      }
+    }
+
+    .slider-thumb.selected {
+      //background: no-repeat center center/100% url("./images/coachella-tracker.png") !important;
+      background: no-repeat center center/100% url("./images/tatort-tracker.png") !important;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      background: #00000040;
+      min-width: 130px;
+      min-height: 50px;
+
+      .selected, &:active {
+        background: #000132;
+      }
+    }
+
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress {
+      background: #2E675E;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+  }
+}

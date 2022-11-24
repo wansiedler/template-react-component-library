@@ -1,0 +1,470 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+
+  //ResultNew-specific styling
+  .age.Result {
+    .hk {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font-size: 20px;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+        width: auto;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        margin-top: 13px;
+
+        .progress-bar-label {
+          width: inherit;
+          font-size: 15px;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &.interactive {
+        .progress-selected > .round > .progress-bar {
+          border: 1px solid #3A8E95 !important;
+
+          .progress-bar-filler {
+            background: #3A8E95;
+          }
+        }
+      }
+    }
+  }
+
+  //SelectGroup-specific styling
+  .age.selectGroup {
+    .hk {
+      .choices {
+        margin-top: 30px;
+      }
+
+      .select-button {
+        margin: 5px;
+        padding: 5px 0;
+      }
+
+      .result-progress-bar {
+        margin-top: 27px;
+
+        .progress-bar {
+          width: 85%;
+          height: 20px;
+
+          .progress-bar-filler {
+            background: $progress-bar-filler-grey;
+          }
+        }
+      }
+    }
+  }
+
+  //Question-specific styling
+  .age.Question {
+    .hk {
+      .choices {
+        margin: 40px 0 20px 0;
+
+        label {
+          font-size: 20px;
+          margin-top: 13px;
+        }
+      }
+
+      .submit-button {
+        margin-top: 30px;
+      }
+
+      .subtitle {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .age.Vote {
+    .hk {
+      .question-overlay, .question, .question:before {
+        min-height: 283px !important;
+        clip-path: ellipse(80% 100% at 50% 0%) !important;
+        margin-bottom: 60px;
+      }
+
+      .question-overlay {
+        margin-bottom: 40px;
+      }
+
+      .slider-labels-container {
+        bottom: 15% !important;
+        width: 90%;
+      }
+
+      .slider-bar-wrapper {
+        background: $slider-bar-workLifeBalance;
+      }
+
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+        line-height: 23px;
+      }
+
+      .left-text {
+        text-align: left;
+        margin-left: 20px;
+      }
+
+      .right-text {
+        text-align: right;
+        margin-right: 20px;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        margin: 0 40px 10px 40px;
+        font-size: 22px;
+        font-weight: normal;
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+          margin: -20px 40px 10px 40px;
+        }
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+
+      .slider-labels-container {
+        width: 90%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+
+        .slider-bar-wrapper {
+          .slider-thumb {
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  .Result {
+    .hk {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+        width: auto;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        margin-top: 20px;
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $primary-urlaub-gender !important;
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $primary-urlaub-gender;
+      }
+
+      .progress-selected {
+        .progress-bar {
+          border: 1px solid $selected-urlaub-gender !important;
+        }
+
+        .progress-bar-filler {
+          background: $selected-urlaub-gender;
+        }
+      }
+    }
+  }
+
+  //AGE QUIZ
+  .age > .hk {
+    .round {
+      height: 20px;
+
+      .progress-bar {
+        height: inherit;
+        width: 87%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        position: relative;
+        border: 1px solid $progress-bar-result-age !important;
+
+        .progress-bar-label {
+          position: absolute;
+        }
+      }
+    }
+
+    .progress-bar-filler {
+      box-shadow: 0 3px 6px #0000004D;
+    }
+
+    .progress-bar-filler {
+      background: $progress-bar-result-age;
+    }
+
+    .question {
+      margin-bottom: 30px;
+    }
+
+    &.basic {
+      .progress,
+      .slider-dot,
+      .select-button, .progress-selected .progress-bar-filler {
+        background: $primary-hk-basic;
+      }
+
+      .progress-selected .progress-bar {
+        border: 1px solid $primary-hk-basic !important;
+      }
+
+      .question:before {
+        background-image: url("./images/urlaub-background-interactive.jpeg");
+      }
+
+      .slider-wrapper .slider-thumb {
+        width: 67px;
+        height: 67px;
+        border-radius: 0;
+        background: no-repeat center center/100% url("./images/urlaub-age-tracker-interactive.png");
+      }
+    }
+
+    &.interactive {
+      .progress,
+      .slider-dot,
+      .select-button {
+        background: $primary-hk-interactive;
+      }
+
+      .progress-selected .progress-bar {
+        border: 1px solid $primary-hk-interactive !important;
+      }
+
+      .question:before {
+        background-image: url("./images/urlaub-background-basic.jpeg");
+      }
+
+      .slider-wrapper .slider-thumb {
+        width: 67px;
+        height: 67px;
+        border-radius: 0;
+        background: no-repeat center center/100% url("./images/urlaub-age-tracker-basic.png");
+      }
+
+      .slider-dot {
+        background: $primary-hk-interactive;
+      }
+
+      .select-button {
+        background: $primary-hk-interactive;
+
+        &:active {
+          background: $selected-urlaub-age;
+        }
+      }
+
+      .round {
+        .progress-bar {
+
+          border: 1px solid $progress-bar-result-age !important;
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-result-age;
+      }
+    }
+
+    &.hedonistic {
+      .progress,
+      .slider-dot,
+      .select-button, .progress-selected .progress-bar-filler {
+        background: $primary-hk-hedonistic;
+      }
+
+      .progress-selected .progress-bar {
+        border: 1px solid $primary-hk-hedonistic !important;
+      }
+
+      .question:before {
+        background: no-repeat center center url("./images/urlaub-background-hedonistic.jpeg");
+        background-size: 130% !important;
+      }
+
+      .slider-wrapper .slider-thumb {
+        width: 67px;
+        height: 67px;
+        border-radius: 0;
+        background: no-repeat center center/100% url("./images/urlaub-age-tracker-hedonistic.png");
+      }
+    }
+
+    .select-button {
+      &:active {
+        background: $selected-hk;
+      }
+    }
+  }
+
+  .hk {
+    .progress-array, .progress-wrapper {
+      background: $white;
+      opacity: 1;
+      width: 100%;
+    }
+
+    .question > h3 {
+      font-size: 25px;
+    }
+
+    .question:before, .question {
+      clip-path: ellipse(70% 100% at 50% 0%);
+      background: rgba(87, 86, 86, 0.9);
+    }
+
+    .question:before {
+      opacity: 0.5;
+      background-image: url("./images/urlaub-background-gender.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .select-button {
+      padding: 20px;
+      min-width: 105px;
+    }
+
+    .label, .select-button, .progress-bar, .progress-bar-filler {
+      box-shadow: 0 4px 8px #0000008C;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      line-height: 35px;
+      font: 22px Arial;
+      line-height: 35px;
+    }
+  }
+}

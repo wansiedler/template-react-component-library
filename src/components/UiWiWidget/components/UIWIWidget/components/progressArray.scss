@@ -1,0 +1,47 @@
+@import "src/UiWiWidget/styles/abstracts/variables";
+
+#UiWiWidget {
+  .progress {
+    transform-origin: center left;
+    perspective: 1000px;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+  }
+
+  .progress-array, .progress-wrapper {
+    background: $white;
+  }
+
+  .progress-wrapper {
+    height: 10px;
+    margin: 0 15px 0 0;
+    transition: opacity 400ms ease-in-out;
+    max-width: 100%;
+    //opacity: 0.5;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  .progress-array {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    align-self: center;
+    z-index: 99;
+    opacity: 1;
+    //width: 95%;
+    margin-top: 15px;
+    filter: "drop-shadow(0 1px 8px #222)";
+  }
+
+
+}

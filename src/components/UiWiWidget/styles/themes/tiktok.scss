@@ -1,0 +1,452 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result {
+    .tiktok {
+      .question > h3 {
+        padding: 0 40px;
+      }
+
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+
+      h3 {
+        margin: 0 5%;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-weight: bold;
+          line-height: 20px;
+          width: 40%;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+
+          &.selected {
+            font-weight: 600;
+          }
+        }
+
+        .slider-bar-wrapper {
+          position: relative;
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            height: 20px;
+            box-shadow: 0 2px 5px $grill-box-shadow;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+
+              &.selected {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tiktok.basic {
+      .result-progress-bar .slider-wrapper .slider-bar-wrapper .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-basic.png");
+      }
+    }
+
+    .tiktok.interactive {
+      .result-progress-bar .slider-wrapper .slider-bar-wrapper .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-interactive.png");
+      }
+    }
+
+    .tiktok.hedonistic {
+      .result-progress-bar .slider-wrapper .slider-bar-wrapper .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-hedonistic.png");
+      }
+    }
+  }
+
+
+  .age.selectGroup {
+    .tiktok {
+      .question > h3 {
+        margin: auto 20px;
+        line-height: 28px;
+      }
+
+      .subtitle {
+        font-size: 22px;
+        font-weight: normal;
+        margin: 0 50px 20px 50px;
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+          margin: 0 20px 20px 20px;
+        }
+      }
+
+      .select-button {
+        border-radius: 0;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+
+  }
+
+  .age.Vote {
+    .tiktok {
+      .question > h3 {
+        line-height: 27px;
+        padding: 0 60px;
+      }
+
+      .subquestion {
+        font-size: 17px;
+        line-height: 29px;
+        margin-top: 4px;
+        font-weight: normal;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 30%;
+        text-align: center;
+        line-height: 21px;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        margin: 0 50px;
+        @media only screen and (max-width: 400px) {
+          margin: -10px 0 10px;
+        }
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .tiktok.basic {
+      .slider-thumb {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-basic.png");
+      }
+    }
+
+    .tiktok.interactive {
+      .slider-thumb {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-interactive.png");
+      }
+    }
+
+    .tiktok.hedonistic {
+      .slider-thumb {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-hedonistic.png");
+      }
+    }
+  }
+
+  .Vote {
+    .tiktok {
+      .question-overlay {
+        margin-bottom: 100px;
+      }
+
+      .slider-wrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .tiktok {
+    .question-overlay {
+      position: relative;
+
+      &:before {
+        content: '';
+        width: inherit;
+        height: inherit;
+        position: absolute;
+      }
+    }
+  }
+
+  .tiktok.basic {
+    .progress, .progress-bar-filler,
+    .submit-button,
+    .label, .select-button {
+      background: $primary-tiktok-basic;
+    }
+
+    .question-overlay {
+      &:before {
+        top: -35%;
+        background: no-repeat bottom center/120% url("./images/tiktok-background-basic.jpeg");
+      }
+
+      .question {
+        background: transparent linear-gradient(257deg, $primary-tiktok-basic 0%, #4CE7BA 100%) 0 0 no-repeat padding-box;
+      }
+    }
+
+    .slider-thumb {
+      &.selected {
+        background: no-repeat center center/100% url("./images/tracker-tiktok-basic.png");
+      }
+    }
+  }
+
+  .tiktok.interactive {
+    .progress, .progress-bar-filler,
+    .submit-button,
+    .label, .select-button {
+      background: $primary-tiktok-interactive;
+    }
+
+    .question-overlay {
+      &:before {
+        top: -12%;
+        background: no-repeat center center/110% url("./images/tiktok-background-interactive.jpg");
+      }
+
+      .question {
+        background: transparent linear-gradient(79deg, $primary-tiktok-interactive 0%, #E3C1A4 100%) 0 0 no-repeat padding-box;
+      }
+
+      .slider-thumb {
+        &.selected {
+          background: no-repeat center center/100% url("./images/tracker-tiktok-interactive.png");
+        }
+      }
+    }
+  }
+
+  .tiktok.hedonistic {
+    .progress, .progress-bar-filler,
+    .submit-button,
+    .label, .select-button {
+      background: $primary-tiktok-hedonistic;
+    }
+
+    .question-overlay {
+      &:before {
+        top: -13%;
+        background: no-repeat center center/110% url("./images/tiktok-background-hedonistic.jpg");
+      }
+
+      .question {
+        background: transparent linear-gradient(79deg, #B89013 0%, $primary-tiktok-hedonistic 100%) 0 0 no-repeat padding-box;
+      }
+
+      .slider-thumb {
+        &.selected {
+          background: no-repeat center center/100% url("./images/tracker-tiktok-interactive.png");
+        }
+      }
+    }
+  }
+
+  .tiktok {
+    background: $white;
+
+    .question {
+      box-shadow: 0 3px 6px rgb(0 0 0 / 65%);
+    }
+
+    .progress-array {
+      box-shadow: 0 2px 6px rgb(0 0 0 / 65%);
+    }
+
+    .label.selected, .select-button.selected, .label:active, .select-button:active {
+      background: $selected-tiktok;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      line-height: 35px;
+    }
+
+    .question-overlay {
+      background-size: cover;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+    .question {
+      min-height: 140px;
+      color: $white;
+      opacity: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+    }
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+  }
+}

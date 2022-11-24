@@ -1,0 +1,33 @@
+@import "src/UiWiWidget/styles/abstracts/variables";
+
+#UiWiWidget {
+
+
+  #countdown {
+    position: absolute;
+    top: 10px;
+    color: $white;
+    right: 10px;
+    text-align: center;
+    line-height: 35px;
+    width: 35px;
+    height: 35px;
+    border-radius: 35px;
+  }
+
+
+  .m {
+    background: #0c135e 0 0 no-repeat padding-box;
+  }
+
+  .w {
+    background: #ff0f7b 0 0 no-repeat padding-box;
+    margin-left: 20px;
+  }
+
+  .label-no-result {
+    font: normal normal bold 20px/23px $font-default;
+    letter-spacing: 1.3px;
+    color: $white;
+  }
+}

@@ -1,0 +1,34 @@
+#UiWiWidget {
+  .interactive {
+    opacity: 0.8;
+    animation: blinker 2s linear infinite;
+  }
+
+  .navButton {
+    position: absolute;
+    border: 0;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    z-index: 100;
+
+    left: initial;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 70px;
+    width: 30px;
+    visibility: initial;
+    pointer-events: initial;
+    opacity: 0.1;
+
+    &:hover {
+      opacity: 0.6;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    &:active {
+      opacity: 0.9;
+    }
+  }
+}

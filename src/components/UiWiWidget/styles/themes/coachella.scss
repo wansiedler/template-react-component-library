@@ -1,0 +1,471 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+
+  .age.Vote {
+    .coachella {
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        //position: absolute;
+        //left: 0;
+        //right: 0;
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        //bottom: 40%;
+        //width: 80%;
+        //margin: -40px 100px;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        //bottom: 20%;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+
+  //SelectGroup-specific styling
+  .gender.selectGroup {
+    .coachella {
+      .subtitle {
+        margin: 0px 50px 15px 50px;
+        font: normal normal normal 18px/30px Arial;
+      }
+
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 134px;
+        display: inline-grid;
+        line-height: 1em;
+        align-items: center;
+
+
+        min-width: 130px;
+        min-height: 80px;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 8px;
+      }
+
+      .result-progress-bar {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 20px;
+
+        .result-label {
+          overflow-wrap: revert;
+          word-wrap: revert;
+          box-sizing: revert;
+          --webkit-box-sizing: revert;
+        }
+      }
+    }
+  }
+
+  //ResultNew-specific styling
+  .gender.Result {
+    .coachella {
+      .question {
+        //margin-bottom: 70px
+      }
+
+      h3 {
+        margin: 0 60px;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        > span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-label.selected {
+        font-weight: 600;
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+          max-width: 110px;
+          text-align: left;
+          overflow-wrap: break-word;
+          white-space: pre-wrap; /* css-3 */
+          white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+          //white-space: -pre-wrap; /* Opera 4-6 */
+          white-space: -o-pre-wrap; /* Opera 7 */
+          word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            position: relative;
+            height: 20px;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .coachella {
+      .top-labels-container {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        align-content: center;
+        align-items: stretch;
+        vertical-align: middle;
+
+        > span {
+          width: 50%;
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+
+      .slider-bar-wrapper {
+        background: #A5A5A5 !important;
+      }
+    }
+  }
+
+  .gender.Vote {
+    .coachella {
+      .slider-bar-wrapper {
+        background: $grill-bar-color 0 0 no-repeat padding-box;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        border-radius: 4px;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        //position: absolute;
+        //left: 0;
+        //right: 0;
+        //margin-left: auto;
+        //margin-right: auto;
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        font-weight: bold;
+        line-height: 35px;
+        //bottom: 35%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        bottom: 20%;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+
+  .Vote {
+    .coachella {
+      .question-overlay {
+        margin-bottom: 160px;
+      }
+
+      .slider-wrapper {
+        margin: 30px auto 0 auto !important;
+      }
+    }
+  }
+
+  .gender {
+    .coachella {
+      .slider-labels-container {
+        .left-text, .right-text {
+          text-align: center;
+          color: $black;
+        }
+      }
+
+      .subtitle {
+        margin: 20px 10px 0;
+      }
+    }
+  }
+
+
+  .coachella {
+    background: $white;
+
+    h3 {
+      line-height: 30px;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: 600;
+      line-height: 35px;
+      font-size: 22px;
+    }
+
+    .question-overlay {
+      background-image: url("./images/coachella-background.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .slider-wrapper .slider-thumb {
+      background: no-repeat center center/100% url("./images/coachella-tracker.png");
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+    }
+
+    .slider-labels-container {
+      bottom: 12%;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      border-radius: 0;
+    }
+
+    .progress-selected, .progresss {
+      display: table-cell;
+      width: 70%;
+    }
+
+    span.choice-tab {
+      background: none;
+      display: table-cell;
+      padding: 10px 10px;
+      width: 86px;
+      text-decoration: none;
+      text-align: center;
+      color: $black;
+      -webkit-border-top-left-radius: 0;
+      -webkit-border-top-right-radius: 15px;
+      -moz-border-radius-topleft: 0;
+      -moz-border-radius-topright: 15px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 15px;
+    }
+
+    .result-progress-bar {
+      .progress-bar {
+        width: 85%;
+      }
+    }
+
+    .slider-thumb.selected {
+      background: no-repeat center center/100% url("./images/coachella-tracker.png") !important;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      background: #00000040;
+
+      .selected, &:active {
+        background: #000132;
+      }
+    }
+
+    .question-overlay {
+      //all: revert;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 60px;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      //z-index: -1;
+
+      justify-content: center;
+      //margin-bottom: 100px;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+
+    .question {
+      all: revert;
+      min-height: 140px;
+      color: $black;
+      opacity: 1;
+      padding: 0;
+      z-index: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      background: transparent linear-gradient(257deg, #DCE7C7 0%, #A39473 100%) 0 0 no-repeat padding-box;
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+      line-height: 0;
+      box-shadow: 0 3px 6px #000000A5;
+
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      h3 {
+        margin: 10px auto;
+        color: #000;
+      }
+    }
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress {
+      background: $primary-coachella;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+  }
+}

@@ -1,0 +1,436 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .income.Result {
+    .workLifeBalance {
+      &.basic {
+        .progress-selected {
+          .progress-bar {
+            border: 1px solid $primary-workLifeBalance-basic !important;
+          }
+        }
+      }
+
+      &.interactive {
+        .progress-selected {
+          .progress-bar {
+            border: 1px solid $primary-workLifeBalance-interactive !important;
+          }
+        }
+      }
+
+      &.hedonistic {
+        .progress-selected {
+          // color: $white;
+          .progress-bar {
+            border: 1px solid $primary-workLifeBalance-hedonistic !important;
+          }
+        }
+      }
+
+      .question > h3 {
+        padding: 0 40px;
+      }
+
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+        margin-bottom: 100px !important;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+
+      .choice-tab {
+        margin-top: 13px;
+      }
+
+      .progress-selected {
+        .progress-bar {
+          border: 1px solid $primary-workLifeBalance !important;
+        }
+      }
+    }
+  }
+
+  .income.selectGroup {
+    .workLifeBalance {
+      .subtext {
+        font-size: 22px;
+        margin: 20px 0 10px 0;
+      }
+
+      .subtitle {
+        margin: 50px 85px 20px 85px;
+        @media only screen and (max-width: 400px) {
+          margin: 50px 20px 20px 20px;
+        }
+      }
+
+      .select-button {
+        margin: 5px;
+        padding: 5px 0;
+      }
+
+      .result-progress-bar {
+        margin-top: 27px;
+
+        .progress-bar {
+          width: 85%;
+          height: 20px;
+
+          .progress-bar-filler {
+            background: $progress-bar-filler-grey;
+          }
+        }
+      }
+
+      .choices {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .income.Vote {
+    .workLifeBalance {
+      &.basic,
+      &.interactive,
+      &.hedonistic {
+        .question > h3 {
+          position: absolute;
+        }
+      }
+
+      &.interactive,
+      &.hedonistic {
+        .question > h3 {
+          bottom: 23%;
+        }
+      }
+
+      &.basic {
+        .slider-thumb {
+          background: no-repeat center center/100% url("./images/tracker-workLifeBalance-basic.png");
+        }
+
+        .question {
+          &:before {
+            background: no-repeat center top url("./images/workLifeBalance-background-basic.jpg");
+            background-size: 130% !important;
+          }
+        }
+
+        .question > h3 {
+          top: 20%;
+        }
+      }
+
+      &.interactive {
+        .slider-thumb {
+          background: no-repeat center center/100% url("./images/tracker-workLifeBalance-interactive.png");
+        }
+      }
+
+      &.hedonistic {
+        .slider-thumb {
+          background: no-repeat center center/100% url("./images/tracker-workLifeBalance-hedonistic.png");
+        }
+      }
+
+      &.relatedness {
+        .slider-thumb {
+          background: no-repeat center center/100% url("./images/workLifeBalance-tracker.png");
+        }
+      }
+
+      .question-overlay, .question {
+        min-height: 283px !important;
+        clip-path: ellipse(80% 100% at 50% 0%) !important;
+        margin-bottom: 60px;
+      }
+
+      .slider-labels-container {
+        bottom: 15% !important;
+        width: 90%;
+      }
+
+      .slider-bar-wrapper {
+        background: $slider-bar-workLifeBalance;
+      }
+
+      .slider-wrapper .slider-thumb {
+        width: 67px;
+        height: 67px;
+        border-radius: 0;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+        line-height: 23px;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+        @media only screen and (max-width: 400px) {
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 20px;
+        }
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+
+      .slider-labels-container {
+        width: 90%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+
+        .slider-bar-wrapper {
+          .slider-thumb {
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  .workLifeBalance {
+    .question:before {
+      opacity: 0.4 !important;
+    }
+
+    .question > h3 {
+      font-size: 25px;
+      padding: 0 55px;
+    }
+
+    .slider-dot,
+    .label, .select-button,
+    .progress, .label-ergebnis,
+    .progress-selected > .round > .progress-bar > .progress-bar-filler {
+      background: $primary-workLifeBalance;
+    }
+
+    .subtitle, {
+      bottom: 25% !important;
+    }
+
+    .select-button {
+      min-width: 100px !important;
+      min-height: 50px !important;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      min-width: 130px;
+      min-height: 50px;
+    }
+
+    .question, .question-overlay {
+      clip-path: ellipse(55% 100% at 50% 0%);
+      background: rgba(87, 86, 86, 0.9);
+    }
+
+    .question-overlay {
+      position: relative;
+    }
+
+    .label, .select-button, .progress-bar, .progress-bar-filler {
+      box-shadow: 0 3px 6px $box-shadow;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      line-height: 35px;
+      font-weight: normal;
+    }
+
+    .confirm-button, .subtext {
+      color: $white;
+    }
+
+    .submit-button {
+      border-radius: 26px;
+      margin-top: 17px;
+      width: 200px;
+      background: $button-politik;
+      font: normal normal normal 20px/23px Arial;
+      color: $white;
+      border: none;
+    }
+
+    &.basic {
+      .question {
+        &:before {
+          background: no-repeat center 40% url("./images/workLifeBalance-background-basic.jpg");
+        }
+      }
+
+      .slider-dot,
+      .submit-button,
+      .progress,
+      .label, .select-button,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-workLifeBalance-basic;
+      }
+    }
+
+    &.interactive {
+      .question {
+        &:before {
+          background: no-repeat center center url("./images/workLifeBalance-background-interactive.jpg");
+          background-size: 130% !important;
+        }
+      }
+
+      .slider-dot,
+      .submit-button,
+      .progress,
+      .label, .select-button,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-workLifeBalance-interactive;
+      }
+    }
+
+    &.hedonistic {
+      .question {
+        &:before {
+          background: no-repeat center center url("./images/workLifeBalance-background-hedonistic.jpg");
+          background-size: 130% !important;
+        }
+      }
+
+      .slider-dot,
+      .submit-button,
+      .progress,
+      .label, .select-button,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-workLifeBalance-hedonistic;
+      }
+    }
+
+    &.relatedness {
+      .question-overlay {
+        &:before {
+          left: -2%;
+          transform: rotate(-15deg) scale(1.2);
+          background: no-repeat right -10%/105% url("./images/stereotypes-background-relatedness.jpeg");
+        }
+      }
+    }
+
+    .select-button:active {
+      background-color: $selected-workLifeBalance;
+    }
+  }
+}

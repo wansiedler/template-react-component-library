@@ -1,0 +1,697 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result {
+    .grill {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+    }
+
+    .grill {
+      .question {
+        //margin-bottom: 70px;
+      }
+
+      h3 {
+        //margin: 0 60px;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        //:first-of-type {
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+
+          &.selected {
+            font-weight: 600;
+          }
+        }
+
+        .slider-bar-wrapper {
+          position: relative;
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            height: 20px;
+            box-shadow: 0 2px 5px $grill-box-shadow;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .age.selectGroup {
+    .grill {
+      .subtitle {
+        font-size: 22px;
+        margin: 0px 50px 20px 50px;
+      }
+
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+
+  }
+
+  .age.Result .grill .result-progress-bar .slider-wrapper .slider-bar-wrapper {
+
+    height: 20px;
+    background: #878787 0 0 no-repeat padding-box;
+    box-shadow: 0 2px 5px #737373;
+  }
+
+  //Vote-specific styling
+  .age.Vote {
+    .grill {
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        //position: absolute;
+        //left: 0;
+        //right: 0;
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        //bottom: 40%;
+        //width: 80%;
+        //margin: -40px 100px;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        //bottom: 20%;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .grill {
+      h3 {
+        line-height: 30px;
+      }
+
+      .question:before {
+        all: revert;
+        background: no-repeat bottom right/100% url("./images/grill-background.jpg") !important;
+      }
+
+      .label, .select-button, .label-ergebnis {
+        border-radius: 0;
+      }
+
+      #renderThumb {
+        bottom: -65px;
+      }
+
+      .slider-bar-wrapper {
+        background: $grill-bar-color 0 0 no-repeat padding-box;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        border-radius: 4px;
+      }
+
+      .slider-labels-container {
+        //bottom: 12%;
+
+        .left-text, .right-text {
+          text-align: center;
+          color: $black;
+        }
+      }
+
+      span.choice-tab {
+        background: none;
+        display: table-cell;
+        padding: 10px 10px;
+        width: 86px;
+        text-decoration: none;
+        text-align: center;
+        color: $black;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 15px;
+      }
+
+      .progress-selected, .progresss {
+        display: table-cell;
+        width: 70%;
+      }
+
+      .result-progress-bar {
+        .progress-bar {
+          width: 85%;
+        }
+      }
+    }
+
+
+  }
+
+
+  //SelectGroup-specific styling
+  .gender.selectGroup {
+    .grill {
+      .subtitle {
+        margin: 0px 50px 20px 50px;
+      }
+
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 134px;
+        display: inline-grid;
+        line-height: 1em;
+        align-items: center;
+      }
+
+      .result-progress-bar {
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        column-gap: 20px;
+
+        .result-label {
+          overflow-wrap: revert;
+          word-wrap: revert;
+          box-sizing: revert;
+          --webkit-box-sizing: revert;
+        }
+      }
+
+      .question {
+      }
+    }
+
+    .grill, {
+      .subtitle {
+        font-size: 22px;
+      }
+
+      .select-button {
+        padding: 20px;
+        min-width: 130px;
+        min-height: 80px;
+        //margin: 5px;
+      }
+    }
+  }
+
+  .gender.Result {
+    .grill {
+      .question {
+        //margin-bottom: 70px
+      }
+
+      h3 {
+        margin: 0 60px;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        > span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        //:first-of-type {
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-label.selected {
+        font-weight: 600;
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+          max-width: 110px;
+          text-align: left;
+          overflow-wrap: break-word;
+          white-space: pre-wrap; /* css-3 */
+          white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+          //white-space: -pre-wrap; /* Opera 4-6 */
+          white-space: -o-pre-wrap; /* Opera 7 */
+          word-wrap: break-word; /* Internet Explorer 5.5+ */
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            position: relative;
+            height: 20px;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+
+    .grill {
+      .result-label {
+        font: 1.2em/1em Arial;
+      }
+    }
+
+  }
+
+  .gender.Vote {
+    .grill {
+      .slider-bar-wrapper {
+        background: $grill-bar-color 0 0 no-repeat padding-box;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        border-radius: 4px;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        //position: absolute;
+        //left: 0;
+        //right: 0;
+        //margin-left: auto;
+        //margin-right: auto;
+        margin: 0 auto;
+      }
+
+      .subtitle {
+        font-weight: bold;
+        line-height: 35px;
+        //bottom: 35%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        bottom: 20%;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+
+
+      .subtitle {
+        //bottom: 40%;
+        //margin: -40px 100px;
+      }
+
+      #renderThumb {
+        bottom: -65px;
+      }
+
+      .slider-labels-container {
+        .left-text, .right-text {
+          text-align: center;
+          color: $black;
+        }
+      }
+    }
+  }
+
+
+  .Vote {
+    .grill {
+      .question-overlay {
+        margin-bottom: 160px;
+      }
+
+      .slider-wrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .gender {
+    .grill {
+      h3 {
+        line-height: 30px;
+      }
+
+      .slider-labels-container {
+        //bottom: 12%;
+      }
+
+      .label, .select-button, .label-ergebnis {
+        border-radius: 0;
+      }
+
+      .progress-selected, .progresss {
+        display: table-cell;
+        width: 70%;
+      }
+
+      span.choice-tab {
+        background: none;
+        display: table-cell;
+        padding: 10px 10px;
+        width: 86px;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 15px;
+      }
+
+      .result-progress-bar {
+        .progress-bar {
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .grill {
+    background: $white;
+
+    .submit-button.selected,
+    .progress, .progress-bar-filler {
+      background: $primary-grill;
+    }
+
+    .submit-button,
+    .label, .select-button {
+      background: $label-grill;
+    }
+
+    .label.selected, .select-button.selected, .select-button:active {
+      background: $orange-grill;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: 600;
+      line-height: 35px;
+    }
+
+    .subtitle {
+      //bottom: 40%;
+      //width: 80%;
+      //margin: -40px 100px;
+    }
+
+    .question-overlay {
+      //background: no-repeat bottom right/100% url("./images/grill-background.jpg");
+      background-image: url("./images/grill-background.jpg");
+      background-position: 50% 50%;
+      background-size: cover;
+      //all: revert;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      //z-index: -1;
+      justify-content: center;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+    .question {
+      //all: revert;
+      min-height: 140px;
+      color: $white;
+      opacity: 1;
+      padding: 0;
+      //z-index: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      background: transparent linear-gradient(257deg, $primary-grill 30%, $orange-grill 100%) 0 0 no-repeat padding-box;
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+      background: no-repeat center center/100% url("./images/grill-tracker.png");
+    }
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+
+
+  }
+}

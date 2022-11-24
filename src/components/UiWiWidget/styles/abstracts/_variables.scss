@@ -1,0 +1,170 @@
+//Common
+$newsletter-blue: #008bd0;
+$black: #000;
+$black-box-shadow: #0000004d;
+$white: #fff;
+$red: #ee3322;
+$backgroundWhite: #f7f7f2;
+
+$font-default: Arial;
+$font-default-serif: $font-default, serif;
+$font-age-quiz-title: normal normal bold 22px/33px $font-default-serif;
+$no-repeat-0-pd-box: 0 0 no-repeat padding-box;
+
+//Politik
+$button-politik: #808080AF;
+$box-shadow: #00000029;
+$box-shadow-alt: #00000080;
+$progress-bar: #DCDCDC;
+$progress-bar-filler-grey: #AEABAC;
+$selected-politik: #B8B8B8;
+$primary-politik-basic: #937054;
+$primary-politik-hedonistic: #B62228;
+$primary-politik-interactive: #937054;
+
+//Urlaub
+$primary-urlaub-gender: #AEABAC;
+$selected-urlaub-gender: #A77337;
+$selected-urlaub-age: #B8B8B8;
+$progress-bar-result-age: #BBB9BB;
+
+//Income
+$primary-income-relatedness: #397E93;
+$primary-income-basic: #80557E;
+$primary-income-interactive: #03A7D1;
+$primary-income-hedonistic: #374E34;
+$selected-income: #B8B8B8;
+
+//Tatort
+$primary-tatort: #2E675E;
+
+//Grill
+$primary-grill: #B31D04;
+$orange-grill: #FAB225;
+$age-result-black: #393939;
+$subtitle: #484848;
+$grill-bar-color: #878787;
+$grill-box-shadow: #737373;
+$label-grill: #858585;
+
+//tiktok
+$primary-tiktok-basic: #E1173F;
+$primary-tiktok-interactive: #06B2E2;
+$primary-tiktok-hedonistic: #8F5F09;
+$selected-tiktok: #b8b8b8;
+
+//Wiesn
+$primary-wiesn: #808080AF;
+$primary-wiesn-hedonistic: #4B85C6;
+$primary-wiesn-interactive: $primary-wiesn-hedonistic;
+$primary-wiesn-basic: #BF0226;
+$result-progress-bar-standard-wiesn: #BBB9BB;
+$selected-wiesn: #b8b8b8;
+$primary-wiesn-oldBasic: #966A2A;
+$primary-basic: #966A2A;
+
+$active-wiesn: #606980;
+$button-wiesn: #808080AF;
+$grey-wiesn: #A8A8A8;
+$box-shadow: #00000029;
+$box-shadow-alt: #00000080;
+$progress-bar: #DCDCDC;
+$progress-bar-filler-grey: #AEABAC;
+
+//wm
+$primary-wm-basic: #3569A5;
+$primary-wm-interactive: #A51E28;
+$primary-wm-hedonistic: $primary-wm-interactive;
+$wm-selected: #AEABAC;
+$wm-slider-bar: #BCBABC;
+
+//Coachella
+$primary-coachella: #000238;
+
+//Feiertag
+$primary-feiertag: #872D38;
+$primary-feiertag-yellow: #AD891C;
+$feiertag-selected: #AEABAC;
+
+//Work-Life-Balance
+$primary-workLifeBalance: #A48317;
+$selected-workLifeBalance: #AEABAC;
+$slider-bar-workLifeBalance: #BCBABC;
+$primary-workLifeBalance-basic: #D46353;
+$primary-workLifeBalance-interactive: #97AA00;
+$primary-workLifeBalance-hedonistic: #6A6FFE;
+
+//Inflation
+$primary-inflation: #153665;
+$primary-inflation-basic: #8b9450;
+$primary-inflation-interactive: #6e8fc4;
+$primary-inflation-hedonistic: #e39220;
+$primary-inflation-relatedness: #153665;
+$inflation-bar-color: #878787;
+$inflation-selected: #b8b8b8;
+$inflation-gradient-bg-color-1: #113160;
+$inflation-gradient-bg-color-2: #8AC4DA;
+
+//Krieg
+$primary-krieg: #471818;
+$selected-krieg: #B8B8B8;
+$gradient-bg-color-1-krieg: #481919;
+$gradient-bg-color-2-krieg: #9B4F4F;
+$primary-krieg-basic: #908864;
+$primary-krieg-interactive: #0285e3;
+$primary-krieg-hedonistic: #97C6CE;
+
+//Stereotypes
+$primary-stereotypes: #525252;
+$selected-stereotypes-relatedness: #BFBFBF;
+$gradient-bg-color-1-stereotypes: #F1BBCE;
+$gradient-bg-color-2-stereotypes: #1E56A9;
+$result-bars-stereotypes: #A5A5A5;
+$selected-stereotypes: #A5A5A5;
+$primary-stereotypes-interactive: #5C7892;
+$primary-stereotypes-basic: #087FE5;
+$primary-stereotypes-hedonistic: #712223;
+
+//Beziehungen
+$primary-beziehungen: #AB414A;
+$selected-beziehungen: #A5A5A5;
+$gradient-bg-color-1-beziehungen: #737C88;
+$gradient-bg-color-2-beziehungen: #AD3F48;
+$result-bars-beziehungen: $result-bars-stereotypes;
+$primary-beziehungen-basic: #5B9279;
+$primary-beziehungen-interactive: #E39220;
+$primary-beziehungen-hedonistic: #C3324D;
+
+//Heiß & Kalt
+$primary-hk-basic: #809FB2;
+$primary-hk-hedonistic: #C18152;
+$primary-hk-interactive: #327B81;
+$selected-hk: #AEABAC;
+
+//Default text colors
+$text-black: #191919;
+$text-black-light: #484848;
+
+//Traditionalist
+$primary-traditionalist: #540e1d;
+$primaryGreenTraditionalist: #84bf03;
+$primaryGreenTraditionalistHover: #6d8c03;
+$question-overlay-traditionalist: #d9d2bf;
+$darkBlueTraditionalist: #16193c;
+$lightBlueTraditionalist: #a9abc2;
+
+//Harmoniser
+/*
+$lightBrownHarmoniser: #b7988e;
+$primaryColorHarmoniser: #f2b84c;
+$primaryBrownHarmoniser: #6a3f1c;
+$darkOrangeHarmoniser: #ce8600;
+*/
+
+//Squid Game
+$red-squid-game: #a81c39;
+$dark-red-squid-game: #540e1d;
+$btn-opacity-squid-game: 35%;
+
+$font-size-15: 15px;
+$font-size-25: 25px;

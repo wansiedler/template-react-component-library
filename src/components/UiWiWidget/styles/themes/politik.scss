@@ -1,0 +1,461 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result {
+    .politik {
+      /*.result-progress-bar .slider-wrapper .slider-bar-wrapper {
+        height: 20px;
+        background: #878787 0 0 no-repeat padding-box;
+        box-shadow: 0 2px 5px #737373;
+      }*/
+      .question > h3 {
+        padding: 0 50px;
+      }
+
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .slider-thumb {
+        background: no-repeat center center/100% url("./images/tracker-gray.png");
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-weight: bold;
+          width: 30%;
+          line-height: 19px;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  .age.selectGroup {
+    .politik {
+      .subtitle {
+        font-size: 22px;
+        margin: 50px 70px;
+
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+          margin: -10px 20px 30px 10px;
+        }
+      }
+
+      .select-button {
+        border-radius: 0;
+        box-shadow: 0 2px 6px $grill-box-shadow;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+
+  }
+
+  //Vote-specific styling
+  .age.Vote {
+    .politik {
+      .question-overlay {
+        margin-bottom: 90px;
+      }
+
+      .question > h3 {
+        font-size: 23px;
+      }
+
+      .subtitle {
+        margin-bottom: 50px !important;
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+        }
+      }
+
+      .slider-wrapper {
+        margin-top: 50px;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 20%;
+        line-height: 22px;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .politik {
+      .question:before {
+        all: revert;
+      }
+
+      .label, .select-button, .label-ergebnis {
+        border-radius: 0;
+      }
+
+      .slider-bar-wrapper {
+        background: $grill-bar-color 0 0 no-repeat padding-box;
+        box-shadow: 0 4px 8px $grill-box-shadow;
+        border-radius: 4px;
+      }
+
+      .slider-labels-container {
+        .left-text, .right-text {
+          text-align: center;
+          @media only screen and (max-width: 400px) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      span.choice-tab {
+        background: none;
+        display: table-cell;
+        padding: 10px 10px;
+        width: 86px;
+        text-decoration: none;
+        text-align: center;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 15px;
+      }
+
+      .progress-selected, .progresss {
+        display: table-cell;
+        width: 70%;
+      }
+
+      .result-progress-bar {
+        .progress-bar {
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .politik {
+    background: $white;
+
+    &.basic {
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-politik-basic.png");
+      }
+
+      .progress-bar-filler,
+      .progress, .submit-button,
+      .label, .select-button {
+        background: $primary-politik-basic;
+      }
+
+      .question {
+        background: transparent linear-gradient(79deg, #947054 0%, #3F3129 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        position: relative;
+
+        &:before {
+          content: '';
+          top: -10%;
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          background: no-repeat right center/130% url("./images/politik-background-basic.jpg");
+        }
+      }
+    }
+
+    &.hedonistic {
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/110% url("./images/tracker-politik-hedonistic.png");
+      }
+
+      .slider-thumb {
+        &.selected {
+        }
+      }
+
+      .submit-button.selected, .progress-selected .progress-bar-filler,
+      .progress, .submit-button,
+      .label, .select-button {
+        background: $primary-politik-hedonistic;
+      }
+
+      .question {
+        background: transparent linear-gradient(79deg, #6E96F9 0%, #BA1B1B 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        position: relative;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: -30%;
+          width: inherit;
+          height: inherit;
+          background: no-repeat center center/100% url("images/politik-background-hedonistic.jpg");
+        }
+      }
+    }
+
+    &.interactive {
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-politik-interactive.png");
+      }
+
+      .progress-bar-filler,
+      .progress, .submit-button,
+      .label, .select-button {
+        background: $primary-politik-interactive;
+      }
+
+      .question {
+        background: transparent linear-gradient(79deg, #706D68 0%, #98734A 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        background-image: url("images/politik-background-interactive.jpg");
+      }
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: normal;
+      line-height: 35px;
+    }
+
+    .question {
+      //all: revert;
+      min-height: 140px;
+      color: $white;
+      opacity: 1;
+      padding: 0;
+      //z-index: 1;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      //background: transparent linear-gradient(257deg, $primary-politik 30%, $orange-grill 100%) 0 0 no-repeat padding-box;
+
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+
+      > h3 {
+        font-size: 23px;
+        line-height: 30px;
+      }
+    }
+
+    .select-button:active {
+      background: $selected-politik;
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 51px;
+      height: 91px;
+      border-radius: 0;
+    }
+
+    .result-progress-bar {
+      margin: 10px 0;
+
+      .result-label {
+        font: normal normal normal 20px/23px Arial;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .slider-bar-wrapper {
+        position: relative;
+      }
+
+      .slider-wrapper {
+        .slider-bar-wrapper {
+          height: 20px;
+          box-shadow: 0 2px 5px $grill-box-shadow;
+
+          .slider-thumb {
+            width: 30px;
+            height: 45px;
+          }
+
+          .label-value {
+            position: absolute;
+            top: 2px;
+            right: 5px;
+            color: $white;
+
+            &.selected {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .question-overlay {
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+  }
+}

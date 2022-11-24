@@ -1,0 +1,511 @@
+#UiWiWidgetNew {
+  // Frame
+  .question-frame {
+    // color: red;
+  }
+
+  .question-inner {
+    padding: 20px;
+  }
+
+  .question-overlay {
+    margin-bottom: 10px;
+  }
+
+  .select-button {
+    cursor: pointer;
+  }
+
+  // Progress
+  .progress-array {
+    display: none;
+  }
+
+  // Question
+  .question {
+    min-height: 60px;
+    // height: 100px;
+    // background: none;
+    display: flex;
+    flex-direction: column;
+    clip-path: none;
+    align-items: center;
+
+    h3 {
+      // max-width: 100%;
+      // display: flex;
+      padding: 0;
+      // width: 100%;
+      margin: 0;
+      font: normal normal bold 23px/28px Arial;
+      margin-bottom: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 3.38px;
+      color: #000000;
+    }
+  }
+
+  .question:before {
+    background-image: none;
+    background: none;
+    clip-path: none;
+  }
+
+  .subtitle {
+    text-align: center;
+    font: normal normal normal 20px/20px Arial;
+    letter-spacing: 0px;
+    color: #168ACC;
+    text-shadow: 0 3px 6px rgb(0 0 0 / 25%);
+    // text-shadow: inset 0px 3px 6px #00000065, 0px 3px 6px #00000040;
+    // text-shadow: 0px 1px 1px #00000065;
+    // text-shadow: 1px 1px #00000065, -1px -1px #00000040;
+    margin-bottom: 50px;
+  }
+
+  // SubQuestion
+  .subQuestion {
+    // color: blue;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  // Button
+  button {
+    border-radius: 26px;
+    padding: 10px 10px;
+    color: #000;
+    box-shadow: inset 0px 3px 6px #00000040, 0px 3px 6px #00000040;
+  }
+
+  // Slider
+  .hslider {
+    // width: 100%;
+    // max-width: 500px;
+    // height: 50px;
+    // border: 1px solid grey;
+    margin-bottom: 20px;
+
+    width: 100%;
+    height: 42px;
+    box-shadow: inset 0px 3px 6px #00000064, 0px 3px 6px #00000040;
+    border-radius: 50px;
+  }
+
+  .hslider__thumb {
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+    position: relative;
+    cursor: grab;
+  }
+
+  .hslider__track {
+    top: 0px;
+    bottom: 0px;
+    border-radius: 999px;
+    background: transparent linear-gradient(89deg, #8BB8D1 0%, #168ACC 54%, #0E2531 100%) 0% 0% no-repeat padding-box;
+  }
+
+  .hslider__track-0 {
+    background: #f4f4f4;
+  }
+
+  // Labels
+  .slider-labels-container {
+    display: flex;
+    justify-content: space-between;
+
+    .left-text, .right-text {
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+  }
+
+  //
+  // Trasition Sliding
+  //
+
+  .story-enter {
+    opacity: 0;
+    // transform: scale(0.1);
+    // background: red;
+    transform: translateX(200px);
+    // overflow: hidden;
+  }
+
+  .story-enter-done {
+    // background-color: red !important;
+    // transform: translateX(0px);
+    // overflow: hidden;
+  }
+
+  .story-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 300ms, transform 300ms;
+    // transition: background 300ms, transform 300ms;
+    // overflow: hidden;
+  }
+
+  .story-exit {
+    opacity: 1;
+    // overflow: hidden;
+  }
+
+  .story-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+    // overflow: auto;
+  }
+
+  // Toggle
+
+  .toggle--disabled {
+    .react-toggle-thumb:hover {
+      cursor: default;
+    }
+
+    .react-toggle-track:hover {
+      cursor: default;
+    }
+  }
+
+  .react-toggle--disabled {
+    opacity: 1;
+    cursor: default;
+  }
+
+  .react-toggle--checked {
+    .react-toggle-track {
+      background: #E5E5E5 0% 0% no-repeat padding-box;
+    }
+
+    .react-toggle-thumb {
+      left: 80px;
+    }
+  }
+
+  .react-toggle-track {
+    width: 130px;
+    height: 55px;
+    padding: 0;
+    border-radius: 30px;
+    // background-color: #168ACC;
+    background: transparent linear-gradient(90deg, #168ACC 0%, #E5E5E5 100%) 0% 0% no-repeat padding-box;
+    box-shadow: inset 0px 3px 6px #00000064, 0px 3px 6px #00000040;
+    cursor: pointer;
+  }
+
+  .react-toggle-thumb {
+    background: #F4F4F4 0% 0% no-repeat padding-box;
+    top: 4px;
+    left: 5px;
+    // left: 45px;
+    width: 45px;
+    height: 45px;
+    box-shadow: inset 0px 3px 6px #00000043, 0px 3px 6px #000000BF;
+  }
+
+  .react-toggle-thumb--moved {
+    left: 45px;
+  }
+
+  .react-toggle-thumb-before {
+    width: 44px;
+    height: 55px;
+    top: -0px;
+    position: absolute;
+    // opacity: .5;
+    // background: red;
+    cursor: pointer;
+  }
+}
+
+#UiWiWidgetNew .Preview {
+  .story {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .background {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+  }
+}
+
+#UiWiWidgetNew .Vote {
+  .hslider {
+    margin-top: 60px;
+  }
+
+  .toggle {
+    margin-top: 60px;
+  }
+
+  .choices {
+    margin-top: -20px;
+  }
+}
+
+#UiWiWidgetNew .Vote,
+#UiWiWidgetNew .selectGroup {
+  .choices {
+    column-gap: 10px;
+    row-gap: 12px;
+  }
+
+  .subtitle {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .select-button {
+    font: normal normal normal 18px/24px Arial;
+  }
+
+  button {
+    &:active {
+      background: transparent linear-gradient(90deg, #84B2CC 0%, #1E8DCD 52%, #0D2430 100%) 0 0 no-repeat padding-box;
+      color: $white;
+    }
+  }
+}
+
+#UiWiWidgetNew .age.selectGroup,
+#UiWiWidgetNew .income.Vote,
+#UiWiWidgetNew .income.selectGroup,
+#UiWiWidgetNew .maritalStatus.selectGroup {
+  .choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+#UiWiWidgetNew .maritalStatus.selectGroup {
+  .subtitle {
+    margin: 0 0 17px 0;
+  }
+
+  .select-button {
+    text-transform: uppercase;
+    padding: 8px;
+  }
+}
+
+#UiWiWidgetNew .gender.selectGroup {
+  .choices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .select-button {
+    width: 130px;
+    text-transform: uppercase;
+  }
+}
+
+#UiWiWidgetNew .Result {
+  .story {
+    // padding: 20px;
+  }
+
+  .subtitle {
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+  }
+
+  .restart-button {
+    margin: 8px auto 0 auto;
+    width: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+  }
+
+  // For result slide with select component
+  .selected-select {
+    // min-height: 20px;
+    // min-width: 100px;
+    display: flex;
+    padding: 10px 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 26px;
+    color: #fff;
+    font: normal normal normal 18px/24px Arial;
+    font-weight: 400;
+    background: #168ACC;
+    box-shadow: inset 0px 3px 6px rgb(0 0 0 / 25%), 0px 3px 6px rgb(0 0 0 / 25%);
+  }
+
+  .selected-percentage {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  // For result slide with toggle component
+  .label-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .toggle-percentage {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .labels-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .left-text, .right-text {
+      font-size: 18px;
+      letter-spacing: 0.9px;
+    }
+  }
+
+  // For result slide with slider component
+  .slider-percentage {
+    font-weight: bold;
+    font-size: 25px;
+    align-items: center;
+    margin-bottom: 6px;
+  }
+
+  /*.react-toggle-track {
+    height: 40px;
+  }
+  .react-toggle-thumb {
+    width: 35px;
+    height: 35px;
+  }*/
+
+  // Spacing fixes
+  .kriegv2, .workLifeBalancev2 {
+    .subtitle {
+      margin-bottom: 15px !important;
+    }
+
+    .restart-button {
+      margin: 3px auto 0 auto;
+    }
+  }
+
+  // Bigger spacing for income theme
+  .incomev2 {
+    .subtitle {
+      margin-bottom: 30px;
+    }
+
+    .restart-button {
+      margin: 30px auto 0 auto;
+    }
+  }
+}
+
+#UiWiWidgetNew .income.Result,
+#UiWiWidgetNew .age.Result {
+  .selected-choice {
+    display: inline-block;
+    position: relative;
+    transform: translate(-50%);
+    left: 50%;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+}
+
+#UiWiWidgetNew .gender.Result,
+#UiWiWidgetNew .maritalStatus.Result {
+  .subtitle {
+    margin-bottom: 12px;
+  }
+
+  .selected-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen {
+  #UiWiWidgetNew {
+    width: 320px;
+    height: 380px;
+    position: relative;
+    font-family: $font-default-serif;
+    margin: 0 auto;
+
+
+    * {
+      overflow-wrap: normal;
+      word-wrap: normal;
+      box-sizing: revert;
+      --webkit-box-sizing: revert;
+      padding: 0;
+      margin: 0;
+      line-height: 1em;
+
+      outline: none;
+      border: none;
+    }
+
+    //overflow: hidden;
+    //box-shadow: 0 0 17px #000;
+  }
+}
+
+//  MOBILE PHONES
+@media only screen and (min-width: 320px) and (max-width: 413px) {
+  #UiWiWidgetNew {
+    width: 320px;
+    height: 380px;
+    //box-shadow: 0 2px 5px #737373;
+    //
+    //.ageNew .subtitle {
+    //  font: normal normal normal 20px/20px Arial;
+    //}
+  }
+}
+
+////  MOBILE PHONES
+//@media only screen and (min-width: 414px) and (max-width: 445px) {
+//  #UiWiWidgetNew {
+//    //width: 230px;
+//    //min-height: 400px;
+//    //
+//    //.ageNew .subtitle {
+//    //  font: normal normal normal 28px/24px Arial;
+//    //}
+//
+//  }
+//}
+
+// TABLETS AND PCs
+@media only screen and (min-width: 446px) {
+  #UiWiWidgetNew {
+    //width: 546px;
+    //min-height: 400px;
+    //
+    //.ageNew .subtitle {
+    //  font: normal normal normal 28px/24px Arial;
+    //}
+  }
+}

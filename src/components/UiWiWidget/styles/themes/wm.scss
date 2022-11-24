@@ -1,0 +1,400 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result, .age.selectGroup {
+    .wm {
+      .question > h3 {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .age.Result {
+    .wm {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+        margin-bottom: 100px !important;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar {
+        border: 1px solid #BBB9BB !important;
+      }
+
+      .progress-bar-filler {
+        background: #BBB9BB;
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .choice-tab {
+        margin-top: 13px;
+      }
+
+      &.basic {
+        .progress-selected > .round > .progress-bar {
+          border: 1px solid #4E86C6 !important;
+
+          .progress-bar-filler {
+            background: #4E86C6;
+          }
+        }
+      }
+
+      &.interactive, &.hedonistic {
+        .progress-selected > .round > .progress-bar {
+          border: 1px solid #E0555F !important;
+
+          .progress-bar-filler {
+            background: #E0555F;
+          }
+        }
+      }
+    }
+  }
+
+  .age.selectGroup {
+    .wm {
+      .question > h3 {
+        padding: 0 95px;
+      }
+
+      .subtext {
+        font-size: 22px;
+        margin: 20px 0 10px 0;
+      }
+
+      .subtitle {
+        margin: 50px 70px 20px 70px;
+        @media only screen and (max-width: 400px) {
+          margin: 10px 20px 10px 20px;
+        }
+      }
+
+      .select-button {
+        margin: 5px;
+        padding: 5px 0;
+      }
+
+      .result-progress-bar {
+        margin-top: 27px;
+
+        .progress-bar {
+          width: 85%;
+          height: 20px;
+
+          .progress-bar-filler {
+            background: $progress-bar-filler-grey;
+          }
+        }
+      }
+
+      .choices {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  .age.Vote {
+    .wm {
+      .question {
+        height: 283px;
+      }
+
+      .question, .question-overlay {
+        clip-path: ellipse(80% 100% at 50% 0%);
+        background: rgba(87, 86, 86, 0.9);
+      }
+
+      .question-overlay, .question, .question:before {
+        min-height: 283px !important;;
+        clip-path: ellipse(80% 100% at 50% 0%) !important;
+        margin-bottom: 60px;
+      }
+
+      .slider-labels-container {
+        bottom: 15% !important;
+        width: 90%;
+      }
+
+      .slider-bar-wrapper {
+        background: $wm-slider-bar;
+      }
+
+      .slider-wrapper .slider-thumb {
+        width: 67px;
+        height: 67px;
+        border-radius: 0;
+      }
+
+      &.basic {
+        .slider-wrapper .slider-thumb {
+          background: no-repeat center center/100% url("./images/wm-tracker-basic.png");
+        }
+      }
+
+
+      &.interactive {
+        .slider-wrapper .slider-thumb {
+          background: no-repeat center center/100% url("./images/wm-tracker.png");
+        }
+      }
+
+      &.hedonistic {
+        .slider-wrapper .slider-thumb {
+          background: no-repeat center center/100% url("./images/wm-tracker.png");
+        }
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+        line-height: 22px;
+        text-align: center;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle {
+        @media only screen and (max-width: 400px) {
+          padding-left: 20px;
+          padding-right: 20px;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 60px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .wm {
+      .question {
+        h3 {
+          font-size: 25px;
+          margin: 0 20px;
+        }
+      }
+
+      .slider-labels-container {
+        //bottom: 17%;
+        width: 90%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        //width: 300px;
+
+        .slider-bar-wrapper {
+          .slider-thumb {
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  .wm {
+    &.basic {
+      .question:before {
+        background: no-repeat center center/cover url("./images/wm-background-basic.jpg") !important;
+        background-size: cover !important;
+      }
+
+      .slider-dot,
+      .label, .select-button,
+      .progress, .label-ergebnis,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-wm-basic;
+      }
+    }
+
+    &.interactive {
+      .question:before {
+        background: no-repeat center center/cover url("./images/wm-background-interactive.png") !important;
+      }
+
+      .slider-dot,
+      .label, .select-button,
+      .progress, .label-ergebnis,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-wm-interactive;
+      }
+    }
+
+    &.hedonistic {
+      .question:before {
+        background: no-repeat center center/cover url("./images/wm-background-hedonistic.jpg") !important;
+      }
+
+      .slider-dot,
+      .label, .select-button,
+      .progress, .label-ergebnis,
+      .progress-selected > .round > .progress-bar > .progress-bar-filler {
+        background: $primary-wm-interactive;
+      }
+    }
+
+    .question, .question-overlay {
+      clip-path: ellipse(60% 100% at 50% 0%);
+      background: rgba(87, 86, 86, 0.9);
+    }
+
+    .question {
+      height: 214px;
+    }
+
+    .question:before {
+      opacity: 0.4 !important;
+    }
+
+    button.selected, .label.selected, .select-button:active {
+      background-color: $wm-selected;
+    }
+
+    .subtitle, {
+      bottom: 25% !important;
+    }
+
+    .select-button {
+      min-width: 100px !important;
+      min-height: 50px !important;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      min-width: 130px;
+      min-height: 50px;
+    }
+
+    .question-overlay {
+      position: relative;
+
+      .question-header {
+        h3, span {
+          color: $white;
+          margin: 15px;
+          font-size: 25px;
+        }
+      }
+    }
+
+    .label, .select-button, .progress-bar, .progress-bar-filler {
+      box-shadow: 0 3px 6px $box-shadow;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      line-height: 35px;
+      font-weight: normal;
+    }
+
+    .confirm-button, .subtext {
+      color: $white;
+    }
+
+    .submit-button {
+      border-radius: 26px;
+      margin-top: 17px;
+      width: 200px;
+      background: $button-politik;
+      font: normal normal normal 20px/23px Arial;
+      color: $white;
+      border: none;
+    }
+  }
+}

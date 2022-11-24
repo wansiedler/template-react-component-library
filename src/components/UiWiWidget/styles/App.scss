@@ -1,0 +1,398 @@
+@import "./abstracts/variables";
+
+@import "./themes/coachella";
+@import "./themes/feiertag";
+@import "./themes/grill";
+@import "./themes/politik";
+@import "./themes/tiktok";
+@import "./themes/tatort";
+@import "./themes/hk";
+@import "./themes/urlaub";
+@import "./themes/wiesn";
+@import "./themes/wm";
+@import "./themes/workLifeBalance";
+@import "./themes/inflation";
+@import "./themes/krieg";
+@import "./themes/stereotypes";
+@import "./themes/beziehungen";
+@import "./themes/income";
+
+@import "src/UiWiWidget/components/Quiz/UiWiWidgetNew";
+
+@import "src/UiWiWidget/components/Quiz/Age/age";
+@import "src/UiWiWidget/components/Quiz/Gender/gender";
+@import "src/UiWiWidget/components/Quiz/Interests/interests";
+@import "src/UiWiWidget/components/Quiz/SquidGame/squid-game";
+
+#UiWiWidget {
+  font-family: $font-default-serif;
+  margin: 0 auto;
+
+
+  * {
+    overflow-wrap: normal;
+    word-wrap: normal;
+    box-sizing: revert;
+    --webkit-box-sizing: revert;
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+
+    outline: none;
+    border: none;
+  }
+
+  .sslider-wrapper {
+    width: 400px;
+    height: 250px;
+    border: 1px solid #333;
+    overflow: hidden;
+    border-radius: 4px !important;
+  }
+
+
+  .slider {
+    width: 2000px;
+  }
+
+  .slider-dot {
+    height: 17px !important;
+    width: 17px !important;
+  }
+
+
+  .slider-item {
+    float: left;
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 250px;
+    font-size: 20px;
+    background: #383838;
+    text-align: center;
+    border-radius: 4px !important;
+    transition: all 0.2s linear;
+  }
+
+  .hide {
+    @extend .slider-item;
+  }
+
+  .buttons-wrapper {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+  }
+
+  .buttons-wrapper .prev-button {
+    background-image: url(http://static.birgun.net/static/images/slider-arrow-left.svg);
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 30px;
+    width: 30px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s linear;
+  }
+
+  .buttons-wrapper .next-button {
+    background-image: url(http://static.birgun.net/static/images/slider-arrow-right.svg);
+    @extend .prev-button;
+  }
+
+  .buttons-wrapper button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  /* indicators */
+
+  .indicators {
+    width: 400px;
+    position: absolute;
+    bottom: -4px;
+    z-index: 2 !important;
+    text-align: center;
+  }
+
+  .indicators li {
+    display: inline-block;
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-indent: -9999px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  .indicators li:last-child {
+    margin-right: 0;
+  }
+
+  .active-indicator {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: #fff !important;
+  }
+
+
+  .subtitle {
+    margin-bottom: 20px !important;
+  }
+
+  //.slider-wrapper{
+  //  margin: 40px auto 20px auto !important;
+  //}
+  //disable blue border on drag
+  [contenteditable],
+  #renderThumb:focus-visible, * {
+    border: none !important;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                     supported by Chrome, Edge, Opera and Firefox */
+  }
+
+  a,
+  label,
+  button {
+    cursor: pointer;
+    border: none;
+  }
+
+  .story {
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 17px #000;
+  }
+
+  .label, .select-button, .progress-bar {
+    box-shadow: 0 4px 8px #0000008C;
+  }
+
+  .story > div {
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: center;
+  }
+
+  //.story > div:nth-child(2) {
+  //  margin-top: 30px;
+  //}
+
+  .question-overlay {
+    margin-bottom: 40px;
+  }
+
+  #container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  h3,
+  h2,
+  h1 {
+    max-width: 90%;
+    font-size: 23px;
+    //display: block;
+    //margin: 0 auto;
+    //font: $font-age-quiz-title;
+
+
+  }
+
+  h2 {
+    font: normal normal normal 30px/35px $font-default;
+
+  }
+
+  h3 {
+    font: normal normal 700 22px/33px Arial, serif;
+
+  }
+
+  .label,
+  .label-wrapper {
+    text-align: center;
+    width: 290px;
+    min-height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 9px;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: 26px;
+    /*padding: 5px 0;*/
+  }
+
+  .select-button {
+    text-align: center;
+    border-radius: 26px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    font: normal normal normal 20px/40px $font-default;
+
+  }
+
+
+  .icon {
+    font-weight: normal;
+    font-style: normal;
+    speak: never;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    line-height: 70px;
+    padding-left: 10px;
+    padding-right: unset;
+  }
+
+
+  .label-ergebnis {
+    text-align: center;
+    border-radius: 78px;
+    width: 280px;
+    /*min-height: 50px;*/
+    /*line-height: 50px;*/
+    display: inline-block;
+    vertical-align: middle;
+    margin: 9px 0 10px 0;
+    padding: 15px 5px;
+    line-height: 20px;
+  }
+
+  .label_ergebnis-title {
+    font-weight: bold;
+  }
+
+  .choice-tab {
+    display: block;
+    padding: 5px 10px;
+    min-width: 86px;
+    text-decoration: none;
+    text-align: left;
+    color: $text-black;
+  }
+
+  .submit-button {
+    min-height: 50px;
+  }
+
+  .true {
+    background-color: #489B00 !important;
+  }
+
+  .false {
+    background-color: red !important;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    margin-right: 10rem;
+    justify-content: flex-start;
+    max-width: 400px;
+  }
+
+  .subtext {
+    margin: 40px auto 0;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 35px;
+    color: #484848;
+  }
+
+  .confirm-button, .subtext {
+    color: $white;
+  }
+
+  .submit-button {
+    border-radius: 26px;
+    margin: 17px auto 0;
+    width: 200px;
+    font: normal normal normal 20px/23px Arial;
+    color: $white;
+    border: none;
+  }
+
+  #selected,
+  .selected {
+    opacity: 1 !important;
+  }
+
+  .label:hover,
+  .icon:hover,
+  .input:hover {
+    filter: drop-shadow(0 5px 5px $white);
+  }
+
+  .label,
+  .select-button,
+  .label-ergebnis {
+    color: $white;
+  }
+
+  .start_button,
+  .start_button_age {
+    background: #00a110 $no-repeat-0-pd-box;
+    box-shadow: 0 3px 6px $black-box-shadow;
+
+    > a {
+      color: $white;
+    }
+  }
+
+  .button:hover {
+    filter: drop-shadow(0 5px 5px #aaa);
+  }
+
+  .Vote {
+    .slider-labels-container {
+      .left-text, .right-text {
+        color: $text-black;
+      }
+    }
+  }
+
+  .selectGroup {
+    .subtitle {
+      margin: 50px 85px 40px 85px;
+      @media only screen and (max-width: 400px) {
+        margin: 20px 25px 40px 25px;
+      }
+    }
+  }
+
+  .Result {
+    color: $text-black;
+
+    .top-labels-container {
+      font-size: 15px;
+    }
+
+    .round {
+      height: 20px;
+    }
+  }
+}

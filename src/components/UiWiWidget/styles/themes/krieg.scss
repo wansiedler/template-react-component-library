@@ -1,0 +1,469 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result {
+    .krieg {
+      .question > h3 {
+        margin: auto 20px;
+      }
+
+      .question-overlay {
+        margin-bottom: 70px;
+      }
+
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+
+          .slider-wrapper .slider-bar-wrapper {
+            height: 20px;
+            background: #878787 0 0 no-repeat padding-box;
+            box-shadow: 0 2px 5px #737373;
+          }
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: end;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 15px;
+          font-weight: bold;
+          line-height: 18px;
+        }
+
+        span:last-child {
+          width: 40%;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .slider-thumb {
+        width: 30px;
+        height: 45px;
+        background: no-repeat center center/100% url("./images/tracker-gray.png");
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+
+          &.selected {
+            font-weight: 600;
+          }
+        }
+
+        .slider-bar-wrapper {
+          position: relative;
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            height: 20px;
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: normal;
+
+              &.selected {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .age.selectGroup {
+    .krieg {
+      .subtitle {
+        font-size: 22px;
+        margin: 0 60px 20px 60px;
+
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+          line-height: 24px;
+          margin: -10px 20px 20px 20px;
+        }
+      }
+
+      .select-button {
+        border-radius: 0;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 12px 12px;
+      }
+
+      &.hedonistic {
+        .select-button {
+          color: $text-black-light;
+        }
+      }
+    }
+  }
+
+  //Vote-specific styling
+  .age.Vote {
+    .krieg {
+      .slider-wrapper {
+        margin-top: 30px;
+      }
+
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+
+        .left-text, .right-text {
+          width: 35%;
+          line-height: 20px;
+          @media only screen and (max-width: 400px) {
+            font-size: 15px;
+          }
+        }
+
+        .left-text {
+          margin-left: 10px;
+          text-align: left;
+        }
+
+        .right-text {
+          margin-right: 10px;
+          text-align: center;
+        }
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle {
+        margin: 40px 50px 60px 50px !important;
+
+        @media only screen and (max-width: 400px) {
+          margin: 40px 20px 30px 20px !important;
+        }
+      }
+
+      .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 40px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+
+      .label, .select-button, .label-ergebnis {
+        border-radius: 0;
+      }
+
+      #renderThumb {
+        bottom: -65px;
+      }
+
+      .slider-bar-wrapper {
+        background: $grill-bar-color 0 0 no-repeat padding-box;
+        border-radius: 4px;
+      }
+
+      span.choice-tab {
+        background: none;
+        display: table-cell;
+        padding: 10px 10px;
+        width: 86px;
+        text-decoration: none;
+        text-align: center;
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 15px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 15px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 15px;
+      }
+
+      .progress-selected, .progresss {
+        display: table-cell;
+        width: 70%;
+      }
+
+      .result-progress-bar {
+        .progress-bar {
+          width: 85%;
+        }
+      }
+    }
+  }
+
+  .krieg {
+    background: $white;
+
+    .submit-button.selected,
+    .progress, .progress-bar-filler {
+      background: $primary-krieg;
+    }
+
+    .submit-button,
+    .label, .select-button {
+      background: $primary-krieg;
+    }
+
+    .label.selected, .select-button.selected, .select-button:active {
+      background: $selected-krieg;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: normal;
+      line-height: 35px;
+    }
+
+    .question-overlay {
+      height: 240px;
+      width: 100%;
+      margin-bottom: 90px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+
+      span {
+        font-size: 0.5em;
+      }
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .question {
+      min-height: 140px;
+      color: $white;
+      opacity: 1;
+      padding: 0;
+      transform: rotate(-10deg) scale(1.1) translateY(25px) translateX(-5px);
+
+      background: transparent linear-gradient(79deg, $gradient-bg-color-1-krieg 0%, $gradient-bg-color-2-krieg 100%) 0 0 no-repeat padding-box;
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      box-shadow: 0 3px 6px #000000A5;
+
+      > h3 {
+        line-height: 30px;
+        margin: auto 30px;
+      }
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+      background: no-repeat center center/100% url("./images/krieg-tracker.png");
+    }
+
+    .progress-array {
+      width: 100%;
+      background: $white;
+    }
+
+    .progress-wrapper {
+      opacity: 1;
+      background: $white;
+    }
+
+    .progress {
+      box-shadow: 0 4px 8px #0000008C;
+    }
+
+    &.basic {
+      .question {
+        background: transparent linear-gradient(79deg, #726B4F 0%, #484432 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        &:before {
+          top: -29%;
+          background: no-repeat left 100%/100% url("./images/krieg-background-basic.jpg");
+        }
+      }
+
+      .select-button, .progress {
+        background: $primary-krieg-basic;
+      }
+
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-krieg-basic.png");
+      }
+    }
+
+    &.interactive {
+      .question {
+        background: transparent linear-gradient(79deg, #046ec8 0%, #025395 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        &:before {
+          top: -10%;
+          background: no-repeat center top/100% url("./images/krieg-background-interactive.jpg");
+        }
+      }
+
+      .select-button, .progress {
+        background: $primary-krieg-interactive;
+      }
+
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-krieg-interactive.png");
+      }
+    }
+
+    &.hedonistic {
+      .question {
+        background: transparent linear-gradient(79deg, $primary-krieg-hedonistic 0%, #68736D 100%) 0 0 no-repeat padding-box;
+      }
+
+      .question-overlay {
+        &:before {
+          top: -20%;
+          background: no-repeat center top/100% url("./images/krieg-background-hedonistic.jpg");
+        }
+      }
+
+      .select-button, .progress {
+        background: $primary-krieg-hedonistic;
+      }
+
+      .slider-thumb, .slider-thumb.selected {
+        background: no-repeat center center/100% url("./images/tracker-krieg-hedonistic.png");
+      }
+    }
+
+    .select-button {
+      &:active {
+        background: $selected-krieg;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      .question > h3 {
+        padding: 0 10px;
+      }
+    }
+  }
+}

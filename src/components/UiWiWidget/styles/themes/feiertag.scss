@@ -1,0 +1,497 @@
+@import "src/UiWiWidget/styles/abstracts/_variables";
+
+#UiWiWidget {
+  .age.Result {
+    .feiertag {
+      .result-label {
+        font: 1.2em/1em Arial;
+        display: block;
+        text-align: left;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .subtitle {
+        margin-top: 40px;
+      }
+
+      .choice-tab {
+        font: normal normal normal 20px/23px Arial;
+        text-align: left;
+        padding: 10px 0 3px 10px;
+
+        &.selected {
+          font-weight: 600;
+        }
+      }
+
+      .result-progress-bar {
+        .progress-bar-label {
+          width: inherit;
+        }
+
+        .progress-bar-filler {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .choice-tab {
+        font-size: 20px;
+      }
+
+      .round {
+        height: 15px;
+
+        .progress-bar {
+          height: inherit;
+          width: 87%;
+          text-align: left;
+          display: flex;
+          align-items: center;
+          position: relative;
+          border: 1px solid $progress-bar-filler-grey !important;
+
+          .progress-bar-label {
+            position: absolute;
+          }
+        }
+      }
+
+      .progress-bar-filler {
+        box-shadow: 0 3px 6px #0000004D;
+      }
+
+      .progress-bar-filler {
+        background: $progress-bar-filler-grey;
+      }
+    }
+
+    .feiertag {
+      .progress-selected > .round > .progress-bar > span {
+        // color: $white;
+        // color: $black;
+      }
+    }
+
+    .feiertag {
+      .choice-tab {
+        margin-top: 13px;
+      }
+    }
+
+    .feiertag.neutral {
+      .progress-selected {
+        .progress-bar {
+          border: 1px solid $primary-feiertag !important;
+        }
+      }
+    }
+
+    .feiertag.relatedness {
+      .top-labels-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 10px;
+
+        span {
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+        :first-of-type {
+          text-align: left;
+        }
+
+        :last-child {
+          text-align: right;
+        }
+      }
+
+      .result-progress-bar {
+        margin: 10px 0;
+
+        .result-label {
+          font: normal normal normal 20px/23px Arial;
+
+          &.selected {
+            font-weight: 600;
+          }
+        }
+
+        .slider-bar-wrapper {
+          position: relative;
+        }
+
+        .slider-wrapper {
+          .slider-bar-wrapper {
+            height: 20px;
+            box-shadow: 0 2px 5px $grill-box-shadow;
+
+            .slider-thumb {
+              width: 30px;
+              height: 45px;
+              background: no-repeat center center/100% url("./images/tracker-gray.png");
+
+              &.selected {
+                background: no-repeat center center/100% url("./images/tracker.png");
+              }
+            }
+
+            .label-value {
+              position: absolute;
+              top: 2px;
+              right: 5px;
+              color: $white;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+
+    .feiertag.motivation {
+      .progress-selected {
+        .progress-bar {
+          border: 1px solid $primary-feiertag-yellow !important;
+        }
+      }
+    }
+  }
+
+  .age.selectGroup {
+    .feiertag {
+      .subtext {
+        font-size: 22px;
+        margin: 20px 0 10px 0;
+      }
+
+      .subtitle {
+        margin: 0px 30px 20px 30px;
+        @media only screen and (max-width: 400px) {
+          font-size: 20px;
+          margin: -20px 30px 20px 30px !important;
+        }
+      }
+
+      .select-button {
+        margin: 5px;
+        padding: 5px 0;
+      }
+
+      .result-progress-bar {
+        margin-top: 27px;
+
+        .progress-bar {
+          width: 85%;
+          height: 20px;
+
+          .progress-bar-filler {
+            background: $progress-bar-filler-grey;
+          }
+        }
+      }
+    }
+  }
+
+  .age.Vote {
+    .feiertag {
+      .slider-labels-container {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        font: 18px $font-default-serif;
+      }
+
+      .left-text,
+      .right-text {
+        width: 40%;
+      }
+
+      .left-text {
+        text-align: left;
+      }
+
+      .right-text {
+        text-align: right;
+      }
+
+      .quiz {
+        position: relative;
+      }
+
+      .subtitle, .slider-wrapper, .slider-labels-container {
+        margin: 0 auto;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 30px;
+
+        .slider-outer-wrapper,
+        .slider-wrapper-background,
+        .slider-bar-wrapper {
+          width: 100%;
+        }
+
+        .slider-bar-wrapper,
+        .slider-wrapper-background {
+          height: 15px;
+        }
+
+        .slider-wrapper-background {
+          opacity: 0.9;
+        }
+
+        .slider-outer-wrapper {
+          height: 36px;
+          display: flex;
+          transform: scale(1);
+          cursor: pointer;
+        }
+
+        .slider-dot {
+          height: 15px;
+          width: 15px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    .feiertag {
+      .question {
+        h3 {
+          font-size: 25px;
+          margin: 0 20px;
+        }
+      }
+
+      .slider-labels-container {
+        width: 90%;
+      }
+
+      .slider-wrapper {
+        width: 80%;
+
+        .slider-bar-wrapper {
+          .slider-thumb {
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+
+  .Vote {
+    .feiertag {
+      .question-overlay, .question, .question:before {
+        min-height: 283px !important;
+        clip-path: ellipse(80% 100% at 50% 0%) !important;
+        margin-bottom: 40px;
+      }
+
+      .slider-labels-container {
+        bottom: 15% !important;
+        width: 90%;
+      }
+    }
+  }
+
+
+  .age.selectGroup {
+    .feiertag.relatedness {
+      .select-button {
+        border-radius: 4px;
+        box-shadow: 0 2px 6px #872D38;
+        width: 114px;
+        padding: 5px 0 5px 0;
+        margin: 0 0 10px 12px;
+      }
+    }
+  }
+
+  .feiertag {
+    .subtitle {
+      bottom: 25% !important;
+    }
+
+    .select-button {
+      background: rgba(0, 0, 0, 0.2509803922);
+      min-width: 100px !important;
+      min-height: 50px !important;
+    }
+
+    .label, .select-button, .label-ergebnis {
+      background: #00000040;
+      min-width: 130px;
+      min-height: 50px;
+    }
+
+    .question, .question-overlay {
+      clip-path: ellipse(55% 100% at 50% 0%);
+      background: rgba(87, 86, 86, 0.9);
+    }
+
+    .question-overlay {
+      position: relative;
+
+      .question-header {
+        h3, span {
+          color: $white;
+          margin: 15px;
+          font-size: 25px;
+        }
+      }
+    }
+
+    .label, .select-button, .progress-bar, .progress-bar-filler {
+      box-shadow: 0 3px 6px $box-shadow;
+    }
+
+    button.selected, .label.selected, .select-button:active {
+      background-color: $feiertag-selected;
+    }
+
+    .subtitle {
+      color: $subtitle;
+      font-weight: 600;
+      line-height: 35px;
+    }
+
+    .confirm-button, .subtext {
+      color: $white;
+    }
+
+    .submit-button {
+      border-radius: 26px;
+      margin-top: 17px;
+      width: 200px;
+      background: $button-politik;
+      font: normal normal normal 20px/23px Arial;
+      color: $white;
+      border: none;
+    }
+  }
+
+
+  .feiertag.neutral {
+    .question:before {
+      opacity: 0.4 !important;
+      background-image: url("./images/feiertag-neutral-background.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .slider-bar-wrapper {
+      background: #bcbabc 0 0 no-repeat padding-box;
+    }
+
+    .slider-dot,
+    .label, .select-button,
+    .progress, .label-ergebnis,
+    .progress-selected > .round > .progress-bar > .progress-bar-filler {
+      background: $primary-feiertag;
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 67px;
+      height: 67px;
+      border-radius: 0;
+      background: no-repeat center center/100% url("./images/tracker-red.png");
+    }
+  }
+
+  .feiertag.relatedness {
+    .slider-bar-wrapper {
+      background: #878787 0 0 no-repeat padding-box;
+      box-shadow: 0 4px 8px #737373;
+      border-radius: 4px;
+    }
+
+    .label, .select-button, .progress {
+      background: $primary-feiertag;
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 52px;
+      height: 92px;
+      border-radius: 0;
+      background: no-repeat center center/100% url("./images/grill-tracker.png");
+    }
+
+    .question, .question:before, .question-overlay {
+      clip-path: none !important;
+    }
+
+    .question {
+      min-height: 140px !important;;
+    }
+
+    .question-overlay {
+      background-image: url("./images/feiertag-relatedness-background.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 240px;
+      width: 100%;
+      margin-bottom: 80px;
+      display: flex;
+      flex-direction: column;
+      //z-index: -1;
+      justify-content: center;
+
+      span {
+        font-size: 0.5em;
+      }
+    }
+
+    .question {
+      all: revert;
+      min-height: 140px;
+      color: $white;
+      opacity: 1;
+      padding: 0;
+      transform: rotate(-8deg) scale(1.1, 1.1) translate(0, 20px);
+      background: transparent linear-gradient(257deg, #872D38 0%, #C22B1F 100%) 0% 0% no-repeat padding-box;
+      -webkit-backface-visibility: hidden;
+      margin-top: auto;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .feiertag.motivation {
+    .question:before {
+      opacity: 0.4;
+      background-image: url("./images/feiertag-motivation-background.jpeg");
+      background-position: 50% 50%;
+      background-size: cover;
+    }
+
+    .slider-bar-wrapper {
+      background: #DEDEDE 0 0 no-repeat padding-box;
+    }
+
+    .slider-dot,
+    .label, .select-button,
+    .progress, .label-ergebnis,
+    .progress-selected > .round > .progress-bar > .progress-bar-filler {
+      background: $primary-feiertag-yellow;
+    }
+
+    .slider-wrapper .slider-thumb {
+      width: 67px;
+      height: 67px;
+      border-radius: 0;
+      background: no-repeat center center/100% url("./images/tracker-yellow.png");
+    }
+  }
+}
